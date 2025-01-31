@@ -1,0 +1,19 @@
+/* Adicione seus estilos para o componente Footer aqui */
+.footer {
+  background-color: #ff66b2;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer a {
+  color: #ff99cc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

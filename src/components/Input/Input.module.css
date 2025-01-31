@@ -1,0 +1,10 @@
+/* Adicione seus estilos para inputs reutilizáveis aqui */
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ff69b4; /* Alterado para rosa */
+  border-radius: 4px;
+  background-color: #fff; /* Adicionado fundo branco */
+  color: #ff69b4; /* Adicionado cor do texto rosa */
+}

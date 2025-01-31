@@ -1,22 +1,29 @@
-"use client"; // Indica que este componente é do lado do cliente
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Medico from './medico/Medico';
-import Paciente from './paciente';
-import Consulta from './consulta/Consulta';
 
-const App = () => {
+"use client";
+
+import Link from 'next/link';
+import './page.module.css';
+
+export default function Home() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/medico" element={<Medico />} />
-        <Route path="/paciente" element={<Paciente />} />
-        <Route path="/consulta" element={<Consulta />} />
-      </Routes>
-    </Router>
+    <div>
+      <h1>Bem-vindo à Med_Sylveon</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/medico">Médicos</Link>
+          </li>
+          <li>
+            <Link href="/paciente">Pacientes</Link>
+          </li>
+          <li>
+            <Link href="/consulta">Consultas</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
-};
+}
 
-export default App;
+// Este arquivo define a página inicial da aplicação, incluindo links para as páginas de médicos, pacientes e consultas.
+// O componente Link do Next.js é utilizado para permitir a navegação entre as páginas.
