@@ -1,18 +1,119 @@
-/* Adicione seus estilos para o componente Header aqui */
+/* Estilo do header */
 .header {
   background-color: #ff66b2;
-  padding: 10px 0;
-  text-align: center;
-  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.headerLink {
-  color: white;
+/* Conteúdo do header */
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ícone de menu */
+.menuIcon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: none; /* Oculta o ícone em telas maiores */
+}
+
+/* Estilo da navegação */
+.nav {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Lista de navegação */
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Itens da lista */
+.navList li {
+  margin: 0;
+}
+
+/* Links de navegação */
+.link {
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.headerLink:hover {
-  text-decoration: underline;
+/* Efeito hover nos links */
+.link:hover {
+  background-color: #ff3385;
+  color: #ffffff;
+}
+
+/* Estilo para o menu aberto em telas menores */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block; /* Exibe o ícone em telas menores */
+  }
+
+  .nav {
+    position: fixed; /* Fixa o menu na tela */
+    top: 60px;
+    right: 0px;
+    background-color: #ff66b2;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+  }
+
+  .navOpen {
+    transform: translateX(0);
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navList li {
+    width: 100%;
+  }
+
+  .link {
+    width: 100%;
+    display: block;
+    padding: 10px;
+  }
+
+  /* Adiciona um overlay escuro quando o menu está aberto */
+  .navOpen::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 999; /* Fica abaixo do menu, mas acima do conteúdo */
+  }
 }

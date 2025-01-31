@@ -1,8 +1,8 @@
-// app/consulta/page.js
-"use client";
+'use client';
 
 import { useEffect, useState } from 'react';
-import { listarConsultas } from '../../api/consultaApi';
+import { listarConsultas } from '../../Api/consultaApi';
+import styles from '../page.module.css';
 
 export default function ConsultaPage() {
   const [consultas, setConsultas] = useState([]);
@@ -29,7 +29,7 @@ export default function ConsultaPage() {
 
   return (
     <div>
-      <h1>Lista de Consultas</h1>
+      <h1 className={styles.h1}>Lista de Consultas</h1>
       <ul>
         {consultas.map(consulta => (
           <li key={consulta.id}>

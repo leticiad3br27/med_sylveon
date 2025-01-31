@@ -2,8 +2,9 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { listarMedicos } from '../../api/medicoApi';
+import { listarMedicos } from '../../Api/medicoApi';
 import Link from 'next/link';
+import styles from './MedicoPage.module.css';
 
 export default function MedicoPage() {
   const [medicos, setMedicos] = useState([]);
@@ -25,16 +26,16 @@ export default function MedicoPage() {
     fetchMedicos();
   }, []);
 
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <p className={styles.p}>Carregando...</p>;
+  if (error) return <p className={styles.p}>{error}</p>;
 
   return (
-    <div>
-      <h1>Lista de Médicos</h1>
-      <ul>
+    <div className={styles.div}>
+      <h1 className={styles.h1}>Lista de Médicos</h1>
+      <ul className={styles.ul}>
         {medicos.map(medico => (
-          <li key={medico.id}>
-            <Link href={`/medico/${medico.id}`}>{medico.nome}</Link>
+          <li key={medico.id} className={styles.li}>
+            <Link href={`/medico/${medico.id}`} className={styles.link}>{medico.nome}</Link>
           </li>
         ))}
       </ul>

@@ -1,27 +1,107 @@
-h1 {
-  color: #ff66b2;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
+/* Estilos globais para a página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
   padding: 0;
 }
 
-ul li {
-  margin: 10px 0;
+/* Estilo para o título principal */
+h1 {
+  color: #ff66b2;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para a lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Estilo para os itens da lista */
+ul li {
+  margin: 15px 0;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nos itens da lista */
+ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para os links dentro dos itens da lista */
 ul li a {
   color: #ff99cc;
   text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
+/* Efeito hover nos links */
 ul li a:hover {
+  color: #ff66b2;
   text-decoration: underline;
 }
 
-/* Adicione seus estilos para a página de consultas aqui */
+/* Estilo para a página de consultas */
 .consulta-page {
   padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Botão de ação (opcional) */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover no botão */
+.button:hover {
+  background-color: #ff3385;
+  transform: scale(1.05);
+}
+
+/* Efeito ativo no botão (quando clicado) */
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Estilo para inputs (opcional) */
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover e focus nos inputs */
+.input:hover,
+.input:focus {
+  border-color: #ff66b2;
+  box-shadow: 0 0 8px rgba(255, 102, 178, 0.3);
+  outline: none;
 }

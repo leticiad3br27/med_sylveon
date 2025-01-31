@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { listarPacientes } from '../../api/pacienteApi';
+import styles from './page.module.css';
 
 export default function PacientePage() {
   const [pacientes, setPacientes] = useState([]);
@@ -24,15 +25,15 @@ export default function PacientePage() {
   }, []);
 
   if (loading) {
-    return <div>Carregando...</div>;
+    return <div className={styles.div}>Carregando...</div>;
   }
 
   return (
-    <div>
-      <h1>Lista de Pacientes</h1>
-      <ul>
+    <div className={styles.div}>
+      <h1 className={styles.h1}>Lista de Pacientes</h1>
+      <ul className={styles.ul}>
         {pacientes.map((paciente) => (
-          <li key={paciente.id}>{paciente.nome}</li>
+          <li key={paciente.id} className={styles.li}>{paciente.nome}</li>
         ))}
       </ul>
     </div>
@@ -40,6 +41,6 @@ export default function PacientePage() {
 }
 
 // Este arquivo define a página de listagem de pacientes. 
-// Ele utiliza a função listarPacientes da API para buscar os dados e exibe os pacientes em uma lista. 
+// Ele utiliza a função listarPacientes da Api para buscar os dados e exibe os pacientes em uma lista. 
 // O estado dos dados é gerenciado com useEffect e useState. 
 // A página mostra um carregamento enquanto os dados estão sendo buscados.
