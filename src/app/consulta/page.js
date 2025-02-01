@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { listarConsultas } from '../../Api/consultaApi';
+import { listarConsultas } from '../Api/consultaApi';
 import styles from '../page.module.css';
 
 export default function ConsultaPage() {

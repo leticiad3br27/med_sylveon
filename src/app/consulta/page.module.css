@@ -63,6 +63,56 @@ ul li a:hover {
   max-width: 800px;
 }
 
+/* Estilo para mensagens de erro */
+.error-message {
+  color: #ff3333;
+  background-color: #ffe6e6;
+  padding: 10px;
+  border: 1px solid #ff3333;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Estilo para a lista de consultas */
+.consulta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Estilo para os itens da lista de consultas */
+.consulta-list li {
+  margin: 15px 0;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nos itens da lista de consultas */
+.consulta-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para os links dentro dos itens da lista de consultas */
+.consulta-list li a {
+  color: #ff99cc;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Efeito hover nos links da lista de consultas */
+.consulta-list li a:hover {
+  color: #ff66b2;
+  text-decoration: underline;
+}
+
 /* Botão de ação (opcional) */
 .button {
   display: inline-block;
@@ -105,3 +155,4 @@ ul li a:hover {
   box-shadow: 0 0 8px rgba(255, 102, 178, 0.3);
   outline: none;
 }
+

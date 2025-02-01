@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { listarPacientes } from '../../api/pacienteApi';
+import { listarPacientes } from '../Api/pacienteApi';
 import styles from './page.module.css';
 
 export default function PacientePage() {
@@ -33,7 +33,7 @@ export default function PacientePage() {
       <h1 className={styles.h1}>Lista de Pacientes</h1>
       <ul className={styles.ul}>
         {pacientes.map((paciente) => (
-          <li key={paciente.id} className={styles.li}>{paciente.nome}</li>
+          <li key={paciente.id} className={styles.li}>{paciente.name}</li>
         ))}
       </ul>
     </div>

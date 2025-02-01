@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { listarMedicos } from '../../Api/medicoApi';
+import { listarMedicos } from '@/app/Api/medicoApi'; // Corrigir o caminho da importação
 import Link from 'next/link';
 import styles from './MedicoPage.module.css';
 
@@ -15,8 +15,10 @@ export default function MedicoPage() {
     const fetchMedicos = async () => {
       try {
         const data = await listarMedicos();
+        console.log('Dados recebidos:', data); // Adicionado console.log para verificar os dados recebidos
         setMedicos(data);
       } catch (err) {
+        console.error('Erro ao carregar médicos:', err); // Adicionado console.log para verificar o erro
         setError('Erro ao carregar médicos');
       } finally {
         setLoading(false);
@@ -26,19 +28,33 @@ export default function MedicoPage() {
     fetchMedicos();
   }, []);
 
-  if (loading) return <p className={styles.p}>Carregando...</p>;
-  if (error) return <p className={styles.p}>{error}</p>;
-
   return (
     <div className={styles.div}>
       <h1 className={styles.h1}>Lista de Médicos</h1>
-      <ul className={styles.ul}>
-        {medicos.map(medico => (
-          <li key={medico.id} className={styles.li}>
-            <Link href={`/medico/${medico.id}`} className={styles.link}>{medico.nome}</Link>
-          </li>
-        ))}
-      </ul>
+      {loading && <p className={styles.loading}>Carregando...</p>}
+      {error && <p className={styles.error}>{error}</p>}
+      {!loading && !error && (
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Especialidade</th>
+              <th>Contato</th>
+            </tr>
+          </thead>
+          <tbody>
+            {medicos.map(medico => (
+              <tr key={medico.id}>
+                <td>
+                  <Link href={`/medico/${medico.id}`} className={styles.link}>{medico.nome}</Link>
+                </td>
+                <td>{medico.especialidade}</td>
+                <td>{medico.contato}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }
