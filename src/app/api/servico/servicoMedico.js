@@ -1,7 +1,7 @@
 import { medicos } from '../data/dados.js';
 
 // Buscar todos os médicos
-const buscarTodosMedicos = () => {
+const listarMedicos) => {
     return medicos;
 };
 
@@ -38,4 +38,4 @@ const excluirMedico = (id) => {
     return true;
 };
 
-export { buscarTodosMedicos, buscarMedicoPorId, buscarMedicoPorEspecialidade, adicionarMedico, atualizarMedico, excluirMedico };
+export default {listarMedico, buscarMedicoPorId, buscarMedicoPorEspecialidade, adicionarMedico, atualizarMedico, excluirMedico };
