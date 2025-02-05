@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { listarMedicos, buscarMedicoPorEspecialidade } from'../api/servico/servicoMedicos';
+import { listarMedicos, buscarMedicoPorEspecialidade } from'../api/medico/medico';
 import { adicionarConsulta } from '../api/servico/servicoConsulta';
 import Link from 'next/link';
 import styles from './MedicoPage.module.css';

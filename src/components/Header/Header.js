@@ -1,52 +1,47 @@
-"use client";
-
+'use client'
 import Link from 'next/link';
-import { useState } from 'react';
 import styles from './Header.module.css';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Função para alternar o menu
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <header className={styles.header}>
-      <div className={styles.headerContent}>
-        {/* Ícone de menu (casinha) */}
-        <button className={styles.menuIcon} onClick={toggleMenu}>
-          {isMenuOpen ? '✕' : '☰'} {/* Alterna entre ícone de menu e "X" */}
-        </button>
-
-        {/* Menu de navegação */}
-        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
-          <ul className={styles.navList}>
-            {/* Link para a homepage */}
-            <li>
-              <Link href="/" className={styles.link} onClick={toggleMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/medico" className={styles.link} onClick={toggleMenu}>
-                Médicos
-              </Link>
-            </li>
-            <li>
-              <Link href="/paciente" className={styles.link} onClick={toggleMenu}>
-                Pacientes
-              </Link>
-            </li>
-            <li>
-              <Link href="/consulta" className={styles.link} onClick={toggleMenu}>
-                Consultas
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav className={styles.nav}>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <Link href="/medico" className={styles.link}>Médico</Link>
+            <ul className={styles.submenu}>
+              <li className={styles.subitem}>
+                <Link href="/medico/agenda" className={styles.sublink}>Agenda</Link>
+              </li>
+              <li className={styles.subitem}>
+                <Link href="/medico/prontuarios" className={styles.sublink}>Prontuários</Link>
+              </li>
+            </ul>
+          </li>
+          <li className={styles.item}>
+            <Link href="/paciente" className={styles.link}>Paciente</Link>
+            <ul className={styles.submenu}>
+              <li className={styles.subitem}>
+                <Link href="/paciente/agendamentos" className={styles.sublink}>Agendamentos</Link>
+              </li>
+              <li className={styles.subitem}>
+                <Link href="/paciente/resultados" className={styles.sublink}>Resultados de Exames</Link>
+              </li>
+            </ul>
+          </li>
+          <li className={styles.item}>
+            <Link href="/consultas" className={styles.link}>Consultas</Link>
+            <ul className={styles.submenu}>
+              <li className={styles.subitem}>
+                <Link href="/consultas/agendar" className={styles.sublink}>Agendar</Link>
+              </li>
+              <li className={styles.subitem}>
+                <Link href="/consultas/historico" className={styles.sublink}>Histórico</Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };

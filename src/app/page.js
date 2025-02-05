@@ -34,17 +34,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1 className={styles.h1}>Bem-vindo à Med_Sylveon</h1>
       <nav className={styles.nav}>
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            <Link href="/medico" className={styles.link}>Médicos</Link>
-          </li>
-          <li className={styles.li}>
-            <Link href="/paciente" className={styles.link}>Pacientes</Link>
-          </li>
-          <li className={styles.li}>
-            <Link href="/consulta" className={styles.link}>Consultas</Link>
-          </li>
-        </ul>
+        
       </nav>
 
       {/* Botão de rolar para o topo */}
