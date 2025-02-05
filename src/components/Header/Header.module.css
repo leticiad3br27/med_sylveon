@@ -1,12 +1,17 @@
+
 .header {
-  background-color: #ffa7f3;
+  background-color: #ff66b2;
   padding: 1rem;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%; 
 }
 
 .list {
@@ -14,6 +19,8 @@
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item {
@@ -23,20 +30,22 @@
 
 .link {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .submenu {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: #ff9dcb91;
-  border: 1px solid #ccc;
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: #ff66b369;
+  border: none; 
   list-style: none;
   margin: 0;
   padding: 0;
   display: none;
+  z-index: 1; 
 }
 
 .item:hover .submenu {
@@ -45,9 +54,10 @@
 
 .subitem {
   padding: 0.5rem 1rem;
+  text-align: center; 
 }
 
 .sublink {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
 }
