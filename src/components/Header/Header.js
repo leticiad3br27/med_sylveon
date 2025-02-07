@@ -7,8 +7,10 @@ const Header = () => {
     <header className={styles.header}>
       <img className={styles.Icon} src="/Icon.png" alt="Icon" />
       <nav className={styles.nav}>
-        
         <ul className={styles.list}>
+          <li className={styles.item}>
+            <Link href="/" className={styles.link}>Home</Link>
+          </li>
           <li className={styles.item}>
             <Link href="/medicoLista" className={styles.link}>Médico</Link>
             <ul className={styles.submenu}>
