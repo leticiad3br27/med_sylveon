@@ -11,7 +11,7 @@ const Header = () => {
             <Link href="/medico" className={styles.link}>Médico</Link>
             <ul className={styles.submenu}>
               <li className={styles.subitem}>
-                <Link href="/medico/agenda" className={styles.sublink}>Listar</Link>
+                <Link href="/medicoLista" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/medico/criar" className={styles.sublink}>Criar</Link>
@@ -28,7 +28,7 @@ const Header = () => {
             <Link href="/paciente" className={styles.link}>Paciente</Link>
             <ul className={styles.submenu}>
             <li className={styles.subitem}>
-                <Link href="/paciente/agenda" className={styles.sublink}>Listar</Link>
+                <Link href="/ListaPacientes" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/paciente/criar" className={styles.sublink}>Criar</Link>
