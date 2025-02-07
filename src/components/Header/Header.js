@@ -8,7 +8,7 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <Link href="/medico" className={styles.link}>Médico</Link>
+            <Link href="/medicoLista" className={styles.link}>Médico</Link>
             <ul className={styles.submenu}>
               <li className={styles.subitem}>
                 <Link href="/medicoLista" className={styles.sublink}>Listar</Link>
@@ -28,7 +28,7 @@ const Header = () => {
             <Link href="/paciente" className={styles.link}>Paciente</Link>
             <ul className={styles.submenu}>
             <li className={styles.subitem}>
-                <Link href="/ListaPacientes" className={styles.sublink}>Listar</Link>
+                <Link href="/paciente" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/paciente/criar" className={styles.sublink}>Criar</Link>
