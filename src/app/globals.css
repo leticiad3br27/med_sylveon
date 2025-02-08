@@ -1,7 +1,20 @@
-/* Adicione seus estilos globais aqui */
-body {
+body{
+  background-color: pink;
+  height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffe6f2;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  flex: 1;
+  margin-bottom: px;
+}
+
+footer {
+
+  background-color: #333;
+  color: white;
+  padding: 20px;
 }

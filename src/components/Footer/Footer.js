@@ -1,6 +1,5 @@
 "use client";
 
-// components/Footer/Footer.js
 import styles from './Footer.module.css';
 
 const Footer = () => {

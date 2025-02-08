@@ -32,6 +32,7 @@ export default function MedicosList() {
       <table className={styles.table}>
         <thead>
           <tr className={styles.tr}>
+            <th className={styles.th}>ID</th>
             <th className={styles.th}>Nome</th>
             <th className={styles.th}>Especialidade</th>
             <th className={styles.th}>Telefone</th>
@@ -42,6 +43,7 @@ export default function MedicosList() {
           {medicos.length > 0 ? (
             medicos.map((medico) => (
               <tr key={medico.id} className={styles.tr}>
+                <td className={styles.td}>{medico.id}</td>
                 <td className={styles.td}>{medico.nome}</td>
                 <td className={styles.td}>{medico.especialidade}</td>
                 <td className={styles.td}>{medico.telefone}</td>

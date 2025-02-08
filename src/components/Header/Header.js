@@ -21,7 +21,7 @@ const Header = () => {
                 <Link href="/CadastroMedico" className={styles.sublink}>Criar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/medico/editar" className={styles.sublink}>Editar</Link>
+                <Link href="/EditarMedico" className={styles.sublink}>Editar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/medico/excluir" className={styles.sublink}>Excluir</Link>
@@ -35,10 +35,10 @@ const Header = () => {
                 <Link href="/paciente" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/paciente/criar" className={styles.sublink}>Criar</Link>
+                <Link href="/CadastroPaciente" className={styles.sublink}>Criar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/paciente/editar" className={styles.sublink}>Editar</Link>
+                <Link href="/EditarPaciente" className={styles.sublink}>Editar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/paciente/excluir" className={styles.sublink}>Excluir</Link>
@@ -52,10 +52,10 @@ const Header = () => {
                 <Link href="/consultas" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/consultas/criar" className={styles.sublink}>Criar</Link>
+                <Link href="/CriaConsulta" className={styles.sublink}>Criar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/consultas/editar" className={styles.sublink}>Editar</Link>
+                <Link href="/EditaConsulta" className={styles.sublink}>Editar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/consultas/excluir" className={styles.sublink}>Excluir</Link>

@@ -20,7 +20,7 @@ export default function ConsultasList() {
       <table className={styles.table}>
         <thead>
           <tr className={styles.tr}>
-            <th className={styles.th}>Nome da Consulta</th>
+            <th className={styles.th}>ID</th>
             <th className={styles.th}>Médico</th>
             <th className={styles.th}>Paciente</th>
             <th className={styles.th}>Tipo de Consulta</th>
@@ -30,7 +30,7 @@ export default function ConsultasList() {
           {consultas.length > 0 ? (
             consultas.map((consulta) => (
               <tr key={consulta.id} className={styles.tr}>
-                <td className={styles.td}>{consulta.nome}</td>
+                <td className={styles.td}>{consulta.id}</td>
                 <td className={styles.td}>{consulta.medico}</td>
                 <td className={styles.td}>{consulta.paciente}</td>
                 <td className={styles.td}>{consulta.tipo}</td>
