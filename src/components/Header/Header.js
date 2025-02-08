@@ -18,7 +18,7 @@ const Header = () => {
                 <Link href="/medicoLista" className={styles.sublink}>Listar</Link>
               </li>
               <li className={styles.subitem}>
-                <Link href="/medico/criar" className={styles.sublink}>Criar</Link>
+                <Link href="/CadastroMedico" className={styles.sublink}>Criar</Link>
               </li>
               <li className={styles.subitem}>
                 <Link href="/medico/editar" className={styles.sublink}>Editar</Link>
