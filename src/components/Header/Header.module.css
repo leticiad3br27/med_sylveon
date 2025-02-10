@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between; /* Alinha o conteúdo com espaço entre */
   align-items: center;
-  position:fixed; /* Para o menu flutuante */
+  position:relative; /* Para o menu flutuante */
   width: 100%;
 }
 
