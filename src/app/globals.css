@@ -1,5 +1,6 @@
 body{
-  background-color: pink;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(255, 242, 244);
   height: 100%;
   margin: 0;
   display: flex;
