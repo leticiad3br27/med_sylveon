@@ -1,5 +1,5 @@
 .h1 {
-  color: #FFC0CB; /* Rosa claro */
+  color: #f8f3f4; /* Rosa claro */
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
 
 .nav ul li a:hover {
   text-decoration: underline;
-  color: #FFB6C1; /* Rosa claro */
+  color: #f7d5da; /* Rosa claro */
 }
 
 .error-message {
@@ -31,7 +31,7 @@
 }
 
 .container {
-  font-family: Arial, sans-serif;
+  
   background-color: #fce4ec; /* Fundo rosa claro */
   color: #4a148c; /* Roxo escuro */
   text-align: center;
